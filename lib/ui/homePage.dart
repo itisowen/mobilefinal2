@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import '../model/DB.dart';
 import '../model/shareprefer.dart';
-import './profilePage.dart';
-
-
 
 class HomePage extends StatefulWidget {
   final Account _account;
@@ -46,16 +43,13 @@ class HomeScreen extends State<HomePage> {
           RaisedButton(
             child: Text("PROFILE SETUP"),
             onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => ProfilePage()),
-              );
+              Navigator.pushReplacementNamed(context, "/profile");
             },
           ),
           RaisedButton(
             child: Text("FRIEND"),
             onPressed: () {
-              Navigator.pushNamed(context, "/friend");
+              Navigator.pushReplacementNamed(context, "/friend");
             },
           ),
           RaisedButton(

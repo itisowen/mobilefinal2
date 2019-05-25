@@ -82,7 +82,8 @@ class LoginScreen extends State<LoginPage> {
                             password.text != account.password) {
                           Toast.show("Invalid user or password", context,
                               duration: Toast.LENGTH_SHORT,
-                              backgroundColor: ,
+                              textColor: Colors.white,
+                              backgroundColor: Colors.redAccent,
                               gravity: Toast.BOTTOM);
                           print("LOGIN FALL");
                         } else {
