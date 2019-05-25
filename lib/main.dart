@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './ui/homePage.dart';
 import './ui/registerPage.dart';
 import './ui/loginPage.dart';
 import './ui/profilePage.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/register": (context) => RegisterPage(),
         "/profile": (context) => ProfilePage(),
         "/friend": (context) => FriendPage(),
+        // "/home": (context) => HomePage(),
       },
     );
   }

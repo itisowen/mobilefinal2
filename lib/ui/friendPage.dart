@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
-import '../model/DB.dart';
 
 class FriendPage extends StatefulWidget {
   @override
@@ -64,19 +63,12 @@ class FriendScreen extends State<FriendPage> {
       ),
       body: Column(
         children: <Widget>[
-          Expanded(
-                      flex: 1,
-                      child: RaisedButton(
-                        child: Text("BACK"),
-                        onPressed: () {
-                          Navigator.pushReplacement(
-                            context,
-                            new MaterialPageRoute(
-                                builder: (context) => HomePage(_account)),
-                          );
-                        },
-                      ),
-                    ),
+          RaisedButton(
+            child: Text("BACK"),
+            onPressed: () {
+              // Navigator.of(context).pushReplacementNamed('/home');
+            },
+          ),
           FutureBuilder(
             future: fetchUsers(),
             builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -142,7 +134,4 @@ class FriendScreen extends State<FriendPage> {
       ),
     );
   }
-}
-
-class HomeUi {
 }
